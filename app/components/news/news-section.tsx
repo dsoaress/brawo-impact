@@ -1,41 +1,12 @@
 import { NewsCard } from './news-card'
+import { getNewsService } from './services/get-news.service'
 
-export interface News {
-  cover: string
-  title: string
-  date: string
-  description: string
-}
-
-const newsData: News[] = [
-  {
-    cover: 'https://source.unsplash.com/random/800x600',
-    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    date: '2021-01-01',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc vel tincidunt lacinia, nisl nisl aliquam nisl, vitae aliquam nisl nisl eu nunc. Sed euismod, nunc vel tincidunt lacinia, nisl nisl aliquam nisl, vitae aliquam nisl nisl eu nunc.'
-  },
-  {
-    cover: 'https://source.unsplash.com/random/800x600',
-    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    date: '2021-01-01',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc vel tincidunt lacinia, nisl nisl aliquam nisl, vitae aliquam nisl nisl eu nunc. Sed euismod, nunc vel tincidunt lacinia, nisl nisl aliquam nisl, vitae aliquam nisl nisl eu nunc.'
-  },
-  {
-    cover: 'https://source.unsplash.com/random/800x600',
-    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    date: '2021-01-01',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc vel tincidunt lacinia, nisl nisl aliquam nisl, vitae aliquam nisl nisl eu nunc. Sed euismod, nunc vel tincidunt lacinia, nisl nisl aliquam nisl, vitae aliquam nisl nisl eu nunc.'
-  }
-]
-
-export function NewsSection() {
+export async function NewsSection() {
+  const newsData = await getNewsService()
   return (
     <div>
       <h2>Actualités de Brawo Impact</h2>
-      {newsData.map((n, i) => (
+      {newsData.docs.map((n, i) => (
         <NewsCard key={i} {...n} />
       ))}
 

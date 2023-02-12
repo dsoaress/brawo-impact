@@ -10,7 +10,13 @@ export default function Home() {
 
       <DomainsSection />
       <FormulasSection />
+
+      {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+      {/* @ts-ignore */}
       <TeamSection />
+
+      {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+      {/* @ts-ignore */}
       <NewsSection />
     </main>
   )

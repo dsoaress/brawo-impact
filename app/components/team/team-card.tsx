@@ -1,11 +1,32 @@
-import type { Team } from './team-section'
+import { Avatar, Content, Role, Title, Wrapper } from './styles/team-card.style'
 
-export function TeamCard({ avatar, name, role }: Team) {
+interface Team {
+  name: string
+  role: string
+  image: {
+    url: string
+    alt: string
+    width: number
+    height: number
+    blurhash: string
+  }
+}
+
+export function TeamCard({ image, name, role }: Team) {
   return (
-    <div>
-      <img src={avatar} alt={name} />
-      <h3>{name}</h3>
-      <p>{role}</p>
-    </div>
+    <Wrapper>
+      <Content>
+        <Avatar
+          alt={image.alt}
+          src={image.url}
+          width={image.width}
+          height={image.height}
+          blurDataURL={image.blurhash}
+          placeholder="blur"
+        />
+        <Title>{name}</Title>
+        <Role>{role}</Role>
+      </Content>
+    </Wrapper>
   )
 }
