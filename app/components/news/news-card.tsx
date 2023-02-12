@@ -1,13 +1,35 @@
-import { formatDate } from '../../utils/format-date'
-import type { News } from './news-section'
+import Image from 'next/image'
+import Link from 'next/link'
 
-export function NewsCard({ cover, date, description, title }: News) {
+import { formatDate } from '../../utils/format-date'
+
+interface News {
+  id: string
+  title: string
+  slug: string
+  cover: {
+    alt: string
+    url: string
+    blurhash: string
+    width: number
+    height: number
+  }
+  publishedAt: string
+}
+
+export function NewsCard({ cover, publishedAt, title, slug }: News) {
   return (
-    <div>
-      <img src={cover} alt={title} />
+    <Link href={`/actualites/${slug}`}>
+      <Image
+        alt={cover.alt}
+        src={cover.url}
+        width={cover.width}
+        height={cover.height}
+        blurDataURL={cover.blurhash}
+        placeholder="blur"
+      />
       <h3>{title}</h3>
-      <p>{formatDate(date)}</p>
-      <p>{description}</p>
-    </div>
+      <p>{formatDate(publishedAt)}</p>
+    </Link>
   )
 }
