@@ -10,8 +10,6 @@ export const Heading = styled('h2', {
   color: '#383838',
   lineHeight: 1.2,
   fontWeight: 700,
-  margin: 0,
-  padding: 0,
 
   variants: {
     as: {
