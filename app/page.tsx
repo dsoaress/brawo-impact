@@ -6,8 +6,6 @@ import { TeamSection } from './components/team'
 export default function Home() {
   return (
     <main>
-      <h1>Hello</h1>
-
       <DomainsSection />
       <FormulasSection />
 

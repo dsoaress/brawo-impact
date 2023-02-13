@@ -1,35 +1,41 @@
 import { DomainCard } from './domain-card'
+import { FifthIcon } from './icons/fifth-icon'
+import { FirstIcon } from './icons/first-icon'
+import { FourthIcon } from './icons/fourth-icon'
+import { SecondIcon } from './icons/second-icon'
+import { ThirdIcon } from './icons/third-icon'
+import { SectionHeading, SectionList, SectionWrapper } from './style'
 
 export interface Domain {
-  icon: string
+  icon: JSX.Element
   title: string
   description: string
 }
 
 const domainsData: Domain[] = [
   {
-    icon: 'icon',
+    icon: <FirstIcon />,
     title: 'Energies Renouvelables',
     description: 'Photovoltaïque Eolien Hydraulique Hydrogène Biomasse'
   },
   {
-    icon: 'icon',
+    icon: <SecondIcon />,
     title: 'Economie Circulaire',
     description:
       'Recyclage Achat durable Eco Conception Ecologie industrielle Réparation & Réemploi'
   },
   {
-    icon: 'icon',
+    icon: <ThirdIcon />,
     title: 'Bâtiments durables',
     description: 'Isolation Bureaux études Construction Géothermie'
   },
   {
-    icon: 'icon',
+    icon: <FourthIcon />,
     title: 'Business Impact',
     description: 'Project Management Analyse & Finance Sales, Digital Impact Marketing'
   },
   {
-    icon: 'icon',
+    icon: <FifthIcon />,
     title: 'Economie Sociale & Solidaire',
     description: "Association Fondation Coopérative Société d'utilité sociale"
   }
@@ -37,11 +43,13 @@ const domainsData: Domain[] = [
 
 export function DomainsSection() {
   return (
-    <div>
-      <h2>Domaines d&apos;expertise</h2>
-      {domainsData.map((d, i) => (
-        <DomainCard key={i} {...d} />
-      ))}
-    </div>
+    <SectionWrapper>
+      <SectionHeading>Domaines d&apos;expertise</SectionHeading>
+      <SectionList>
+        {domainsData.map((d, i) => (
+          <DomainCard key={i} {...d} />
+        ))}
+      </SectionList>
+    </SectionWrapper>
   )
 }
