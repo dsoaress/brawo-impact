@@ -1,4 +1,4 @@
-import { Avatar, Content, Role, Title, Wrapper } from './styles/team-card.style'
+import { Avatar, CardContent, CardHeading, CardText, CardWrapper } from './style'
 
 interface Team {
   name: string
@@ -14,8 +14,8 @@ interface Team {
 
 export function TeamCard({ image, name, role }: Team) {
   return (
-    <Wrapper>
-      <Content>
+    <CardWrapper>
+      <CardContent>
         <Avatar
           alt={image.alt}
           src={image.url}
@@ -24,9 +24,13 @@ export function TeamCard({ image, name, role }: Team) {
           blurDataURL={image.blurhash}
           placeholder="blur"
         />
-        <Title>{name}</Title>
-        <Role>{role}</Role>
-      </Content>
-    </Wrapper>
+        <CardHeading as="h3" color="accent">
+          {name}
+        </CardHeading>
+        <CardText font="raleway" weight="semibold">
+          {role}
+        </CardText>
+      </CardContent>
+    </CardWrapper>
   )
 }

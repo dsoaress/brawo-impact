@@ -1,17 +1,17 @@
-import { getTeamService } from './services/get-team.service'
-import { List, Title, Wrapper } from './styles/team-section.style'
+import { getTeamService } from './get-team'
+import { SectionHeading, SectionList, SectionWrapper } from './style'
 import { TeamCard } from './team-card'
 
 export async function TeamSection() {
   const teamData = await getTeamService()
   return (
-    <Wrapper>
-      <Title>Notre équipe</Title>
-      <List>
+    <SectionWrapper>
+      <SectionHeading>Notre équipe</SectionHeading>
+      <SectionList>
         {teamData.docs.map((t, i) => (
           <TeamCard key={i} {...t} />
         ))}
-      </List>
-    </Wrapper>
+      </SectionList>
+    </SectionWrapper>
   )
 }
