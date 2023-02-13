@@ -1,16 +1,22 @@
+import { Button } from '../button'
+import { getNewsService } from './get-news'
 import { NewsCard } from './news-card'
-import { getNewsService } from './services/get-news.service'
+import { CtaLink, SectionHeading, SectionList, SectionWrapper } from './style'
 
 export async function NewsSection() {
   const newsData = await getNewsService()
   return (
-    <div>
-      <h2>Actualités de Brawo Impact</h2>
-      {newsData.docs.map((n, i) => (
-        <NewsCard key={i} {...n} />
-      ))}
+    <SectionWrapper>
+      <SectionHeading>Actualités de Brawo Impact</SectionHeading>
+      <SectionList>
+        {newsData.docs.map((n, i) => (
+          <NewsCard key={i} {...n} />
+        ))}
+      </SectionList>
 
-      <button>Toutes nos actualités</button>
-    </div>
+      <CtaLink href="/actualites">
+        <Button>Toutes nos actualités</Button>
+      </CtaLink>
+    </SectionWrapper>
   )
 }

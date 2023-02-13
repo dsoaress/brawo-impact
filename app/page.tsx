@@ -1,7 +1,7 @@
-import { DomainsSection } from './components/domains/domains-section'
-import { FormulasSection } from './components/formulas/formulas-section'
-import { NewsSection } from './components/news/news-section'
-import { TeamSection } from './components/team/team-section'
+import { DomainsSection } from './components/domains'
+import { FormulasSection } from './components/formulas'
+import { NewsSection } from './components/news'
+import { TeamSection } from './components/team'
 
 export default function Home() {
   return (

@@ -1,7 +1,6 @@
-import Image from 'next/image'
-import Link from 'next/link'
-
 import { formatDate } from '../../utils/format-date'
+import { Text } from '../text'
+import { CardCover, CardLink, CardWrapper, DateWrapper } from './style'
 
 interface News {
   id: string
@@ -19,17 +18,25 @@ interface News {
 
 export function NewsCard({ cover, publishedAt, title, slug }: News) {
   return (
-    <Link href={`/actualites/${slug}`}>
-      <Image
-        alt={cover.alt}
-        src={cover.url}
-        width={cover.width}
-        height={cover.height}
-        blurDataURL={cover.blurhash}
-        placeholder="blur"
-      />
-      <h3>{title}</h3>
-      <p>{formatDate(publishedAt)}</p>
-    </Link>
+    <CardWrapper>
+      <CardLink href={`/actualites/${slug}`} aria-label={title}>
+        <CardCover
+          alt={cover.alt}
+          src={cover.url}
+          width={cover.width}
+          height={cover.height}
+          blurDataURL={cover.blurhash}
+          placeholder="blur"
+        />
+        <DateWrapper>
+          <Text color="accent" weight="normal" size="xs" font="varelaRound">
+            {formatDate(publishedAt)}
+          </Text>
+        </DateWrapper>
+        <Text weight="semibold" size="md" font="quicksand">
+          {title}
+        </Text>
+      </CardLink>
+    </CardWrapper>
   )
 }
