@@ -1,9 +1,9 @@
+import { FifthIcon } from './assets/fifth-icon'
+import { FirstIcon } from './assets/first-icon'
+import { FourthIcon } from './assets/fourth-icon'
+import { SecondIcon } from './assets/second-icon'
+import { ThirdIcon } from './assets/third-icon'
 import { DomainCard } from './domain-card'
-import { FifthIcon } from './icons/fifth-icon'
-import { FirstIcon } from './icons/first-icon'
-import { FourthIcon } from './icons/fourth-icon'
-import { SecondIcon } from './icons/second-icon'
-import { ThirdIcon } from './icons/third-icon'
 import { SectionHeading, SectionList, SectionWrapper } from './style'
 
 export interface Domain {

@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react'
 
+import { Footer } from './components/footer'
 import { getCssText, globalStyles } from './styles/stitches.config'
 
 export default function RootLayout({ children }: { children: ReactNode }) {
@@ -20,7 +21,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
         <style id="stitches" dangerouslySetInnerHTML={{ __html: getCssText() }} />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Footer />
+      </body>
     </html>
   )
 }
