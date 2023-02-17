@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react'
 
-import { Footer } from './components/footer'
-import { getCssText, globalStyles } from './styles/stitches.config'
+import { Footer } from '../components/footer'
+import { getCssText, globalStyles } from '../styles/stitches.config'
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   globalStyles()
@@ -15,6 +15,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               margin: 0;
               padding: 0;
               box-sizing: border-box;
+            }
+
+            body: {
+              background-color: #F0F0F0;
             }
           `}
         </style>

@@ -3,7 +3,6 @@ import { Text } from '../text'
 import { CardCover, CardLink, CardWrapper, DateWrapper } from './style'
 
 interface News {
-  id: string
   title: string
   slug: string
   cover: {

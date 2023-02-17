@@ -1,5 +1,5 @@
+import { getNewsService } from '../../services/get-news'
 import { Button } from '../button'
-import { getNewsService } from './get-news'
 import { NewsCard } from './news-card'
 import { CtaLink, SectionHeading, SectionList, SectionWrapper } from './style'
 
@@ -14,7 +14,7 @@ export async function NewsSection() {
         ))}
       </SectionList>
 
-      <CtaLink href="/actualites">
+      <CtaLink href="/actualites/page">
         <Button>Toutes nos actualités</Button>
       </CtaLink>
     </SectionWrapper>

@@ -1,4 +1,4 @@
-import { getTeamService } from './get-team'
+import { getTeamService } from '../../services/get-team'
 import { SectionHeading, SectionList, SectionWrapper } from './style'
 import { TeamCard } from './team-card'
 
