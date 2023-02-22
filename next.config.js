@@ -5,6 +5,20 @@ const nextConfig = {
   },
   images: {
     domains: ['res.cloudinary.com']
+  },
+  async redirects() {
+    return [
+      {
+        source: '/actualites',
+        destination: '/actualites/page/1',
+        permanent: true
+      },
+      {
+        source: '/actualites/page',
+        destination: '/actualites/page/1',
+        permanent: true
+      }
+    ]
   }
 }
 
