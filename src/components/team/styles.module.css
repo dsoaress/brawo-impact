@@ -1,0 +1,58 @@
+.sectionWrapper {
+  background: #f7f7f7;
+  padding: 72px 40px;
+}
+
+@media (min-width: 768px) {
+  .sectionWrapper {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+.sectionHeading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .sectionHeading {
+    margin-bottom: 56px;
+  }
+}
+
+.sectionList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 32px;
+}
+
+.cardWrapper {
+  margin-top: 104px;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 4px 4px 8px rgb(0 0 0 / 16%);
+}
+
+.avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  margin: -104px 0 40px;
+}
+
+.cardHeading {
+  margin: 0 0 16px;
+}
+
+.cardText {
+  margin: 0 0 16px;
+}

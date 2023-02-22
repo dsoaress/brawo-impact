@@ -1,36 +1,37 @@
+import Link from 'next/link'
+
 import { Text } from '../text'
 import { LinkedinIcon } from './assets/linkedin-icon'
 import { Logo } from './assets/logo'
-import {
-  Box,
-  CopyRightWrapper,
-  FooterLogoWrapper,
-  FooterWrapper,
-  Link,
-  LinksWrapper
-} from './style'
+import style from './styles.module.css'
 
 export function Footer() {
   return (
-    <FooterWrapper>
-      <Box>
-        <FooterLogoWrapper>
+    <footer className={style.footerWrapper}>
+      <div className={style.box}>
+        <div className={style.logoWrapper}>
           <Logo />
-        </FooterLogoWrapper>
-        <LinksWrapper>
-          <Link href="/">
+        </div>
+        <div className={style.linksWrapper}>
+          <Link className={style.footerLink} href="/">
             <Text size="xs">Mentions Légales</Text>
           </Link>
-          <Link href="/" aria-label="Linkedin" target="_blank" rel="noreferrer noopener">
+          <Link
+            className={style.footerLink}
+            href="/"
+            aria-label="Linkedin"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
             <LinkedinIcon width={19} />
           </Link>
-        </LinksWrapper>
-      </Box>
-      <CopyRightWrapper>
+        </div>
+      </div>
+      <div className={style.copyRight}>
         <Text size="xs" weight="normal">
           Brawo Impact {new Date().getFullYear()} © Copyright - Tous droits réservés
         </Text>
-      </CopyRightWrapper>
-    </FooterWrapper>
+      </div>
+    </footer>
   )
 }

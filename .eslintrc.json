@@ -4,14 +4,16 @@
     "sonarjs",
     "prettier",
     "simple-import-sort",
-    "import"
+    "import",
+    "css"
   ],
   "extends": [
     "next/core-web-vitals",
     "plugin:@typescript-eslint/recommended",
     "plugin:sonarjs/recommended",
     "plugin:prettier/recommended",
-    "plugin:import/typescript"
+    "plugin:import/typescript",
+    "plugin:css/recommended"
   ],
   "rules": {
     "@typescript-eslint/consistent-type-imports": "warn",

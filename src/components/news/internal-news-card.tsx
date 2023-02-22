@@ -1,15 +1,11 @@
+import Image from 'next/image'
+import Link from 'next/link'
+
 import { formatDate } from '../../utils/format-date'
-import {
-  InternalCardButton,
-  InternalCardContent,
-  InternalCardCover,
-  InternalCardDescription,
-  InternalCardLink,
-  InternalCardTitle,
-  InternalCardWrapper,
-  InternalCtaWrapper,
-  InternalDateWrapper
-} from './style'
+import { Button } from '../button'
+import { Heading } from '../heading'
+import { Text } from '../text'
+import styles from './styles.module.css'
 
 interface News {
   title: string
@@ -27,27 +23,28 @@ interface News {
 
 export function InternalNewsCard({ cover, excerpt, publishedAt, slug, title }: News) {
   return (
-    <InternalCardWrapper>
-      <InternalCardLink href={`/actualites/${slug}`} aria-label={title}>
-        <InternalCardCover
+    <div className={styles.internalCardWrapper}>
+      <Link className={styles.internalCardLink} href={`/actualites/${slug}`} aria-label={title}>
+        <Image
           alt={cover.alt}
           src={cover.url}
           width={cover.width}
           height={cover.height}
           blurDataURL={cover.blurhash}
           placeholder="blur"
+          className={styles.internalCardCover}
         />
-        <InternalCardContent>
-          <InternalCardTitle>{title}</InternalCardTitle>
-          <InternalDateWrapper color="accent" weight="bold">
+        <div className={styles.internalCardContent}>
+          <Heading className={styles.internalCardTitle}>{title}</Heading>
+          <Text color="accent" weight="bold">
             {formatDate(publishedAt, 'short')}
-          </InternalDateWrapper>
-          <InternalCardDescription>{excerpt}</InternalCardDescription>
-          <InternalCtaWrapper>
-            <InternalCardButton>En savoir plus</InternalCardButton>
-          </InternalCtaWrapper>
-        </InternalCardContent>
-      </InternalCardLink>
-    </InternalCardWrapper>
+          </Text>
+          <Text>{excerpt}</Text>
+          <div>
+            <Button>En savoir plus</Button>
+          </div>
+        </div>
+      </Link>
+    </div>
   )
 }

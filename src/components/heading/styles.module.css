@@ -1,0 +1,44 @@
+.main {
+  color: #383838;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.h1 {
+  font-size: 28px;
+  font-family: var(--varela-round-font);
+}
+
+@media (min-width: 768px) {
+  .h1 {
+    font-size: 40px;
+  }
+}
+
+.h2 {
+  font-size: 28px;
+  font-family: var(--quicksand-font);
+}
+
+@media (min-width: 768px) {
+  .h2 {
+    font-size: 40px;
+  }
+}
+
+.h3 {
+  font-size: 26px;
+  font-family: var(--raleway-font);
+}
+
+.dark {
+  color: #383838;
+}
+
+.light {
+  color: #e4f6fd;
+}
+
+.accent {
+  color: #00a85b;
+}

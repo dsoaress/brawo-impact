@@ -1,1 +1,1 @@
-export { Text } from './style'
+export { Text } from './text'

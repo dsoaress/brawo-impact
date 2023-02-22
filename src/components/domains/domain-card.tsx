@@ -1,19 +1,20 @@
+import { Heading } from '../heading'
 import { Text } from '../text'
 import type { Domain } from './domains-section'
-import { CardWrapper, Heading, IconWrapper } from './style'
+import styles from './styles.module.css'
 
 export function DomainCard({ description, icon, title }: Domain) {
   return (
-    <CardWrapper>
-      <IconWrapper>
+    <div className={styles.cardWrapper}>
+      <div className={styles.iconWrapper}>
         {icon}
-        <Heading as="h3" color="accent">
+        <Heading as="h3" color="accent" className={styles.heading}>
           {title}
         </Heading>
-      </IconWrapper>
+      </div>
       <Text font="quicksand" weight="medium" size="xs">
         {description}
       </Text>
-    </CardWrapper>
+    </div>
   )
 }

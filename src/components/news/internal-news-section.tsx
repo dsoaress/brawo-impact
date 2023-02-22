@@ -1,33 +1,27 @@
 import { constants } from '../../config/constants'
 import { getNewsService } from '../../services/get-news'
+import { Heading } from '../heading'
 import { InternalNewsCard } from './internal-news-card'
 import { Pagination } from './pagination'
-import {
-  InternalSectionHeading,
-  InternalSectionList,
-  InternalSectionSubHeading,
-  InternalSectionWrapper
-} from './style'
+import styles from './styles.module.css'
 
 export async function InternalNewsSection({ page = 1 }: { page: number }) {
   const newsData = await getNewsService({ limit: constants.NEWS_LIMIT, page })
   return (
-    <InternalSectionWrapper>
-      <InternalSectionHeading css={{ textTransform: 'uppercase' }}>
-        Actualités
-      </InternalSectionHeading>
-      <InternalSectionSubHeading as="h2">
+    <div>
+      <Heading className={styles.internalSectionHeading}>Actualités</Heading>
+      <Heading className={styles.internalSectionSubHeading} as="h2">
         Lorem ipsum dolor sit amet consectetur.
-      </InternalSectionSubHeading>
-      <InternalSectionList>
+      </Heading>
+      <div className={styles.internalSectionList}>
         {newsData.docs.map((n, i) => (
           <InternalNewsCard key={i} {...n} />
         ))}
-      </InternalSectionList>
+      </div>
 
       {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
       {/* @ts-ignore */}
       <Pagination currentPage={newsData.page} />
-    </InternalSectionWrapper>
+    </div>
   )
 }

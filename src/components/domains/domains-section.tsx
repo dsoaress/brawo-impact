@@ -1,10 +1,11 @@
+import { Heading } from '../heading'
 import { FifthIcon } from './assets/fifth-icon'
 import { FirstIcon } from './assets/first-icon'
 import { FourthIcon } from './assets/fourth-icon'
 import { SecondIcon } from './assets/second-icon'
 import { ThirdIcon } from './assets/third-icon'
 import { DomainCard } from './domain-card'
-import { SectionHeading, SectionList, SectionWrapper } from './style'
+import styles from './styles.module.css'
 
 export interface Domain {
   icon: JSX.Element
@@ -43,13 +44,13 @@ const domainsData: Domain[] = [
 
 export function DomainsSection() {
   return (
-    <SectionWrapper>
-      <SectionHeading>Domaines d&apos;expertise</SectionHeading>
-      <SectionList>
+    <div className={styles.sectionWrapper}>
+      <Heading className={styles.sectionHeading}>Domaines d&apos;expertise</Heading>
+      <div className={styles.sectionList}>
         {domainsData.map((d, i) => (
           <DomainCard key={i} {...d} />
         ))}
-      </SectionList>
-    </SectionWrapper>
+      </div>
+    </div>
   )
 }

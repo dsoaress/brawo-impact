@@ -1,0 +1,161 @@
+.sectionWrapper {
+  background: #e4f6fd;
+  padding: 72px 16px;
+}
+
+@media (min-width: 768px) {
+  .sectionWrapper {
+    padding: 80px 0;
+  }
+}
+
+.sectionHeading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .sectionHeading {
+    margin-bottom: 48px;
+  }
+}
+
+.sectionList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(416px, 1fr));
+  gap: 32px;
+  margin-bottom: 56px;
+}
+
+@media (min-width: 768px) {
+  .sectionList {
+    margin-bottom: 64px;
+  }
+}
+
+.cardWrapper {
+  position: relative;
+}
+
+.cardLink {
+  text-decoration: none;
+}
+
+.cardCover {
+  width: 100%;
+  height: 290px;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.dateWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 182px;
+  height: 42px;
+  background: #fff;
+  border-radius: 50px;
+  z-index: 5;
+  margin: -25px 0 21px 16px;
+}
+
+.ctaLink {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.internalSectionHeading {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.internalSectionSubHeading {
+  text-align: center;
+}
+
+.internalSectionList {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.internalCardWrapper {
+  box-shadow: 4px 4px 8px rgb(76 76 76 / 16%);
+  border-radius: 8px;
+  padding: 24px 16px;
+  background: #fff;
+}
+
+@media (min-width: 768px) {
+  .internalCardWrapper {
+    padding: 32px;
+  }
+}
+
+.internalCardLink {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  text-decoration: none;
+  line-clamp: 3;
+}
+
+@media (min-width: 768px) {
+  .internalCardLink {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.internalCardCover {
+  width: 100%;
+  height: 204px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .internalCardCover {
+    height: 336px;
+  }
+}
+
+.internalCardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.internalCardTitle {
+  font-size: 24px !important;
+}
+
+.paginationWrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 64px;
+}
+
+.paginationItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  cursor: pointer;
+}
+
+.paginationItemActive {
+  background-color: #50aee9;
+  border-color: #e0e0e0;
+}
+
+.paginationLink {
+  text-decoration: none;
+}
