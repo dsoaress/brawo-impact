@@ -1,3 +1,4 @@
+import { Container } from '../container'
 import { FormulaCard } from './formula-card'
 
 export interface Formula {
@@ -33,10 +34,12 @@ const formulasData: Formula[] = [
 export function FormulasSection() {
   return (
     <div>
-      <h2>2 formules qui s&apos;adaptent à votre besoin</h2>
-      {formulasData.map((f, i) => (
-        <FormulaCard key={i} {...f} />
-      ))}
+      <Container>
+        <h2>2 formules qui s&apos;adaptent à votre besoin</h2>
+        {formulasData.map((f, i) => (
+          <FormulaCard key={i} {...f} />
+        ))}
+      </Container>
     </div>
   )
 }

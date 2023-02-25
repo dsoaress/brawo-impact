@@ -1,13 +1,11 @@
-import { Quicksand, Varela_Round } from '@next/font/google'
+import type { Metadata } from 'next/types'
 
-const varelaRound = Varela_Round({ weight: '400', subsets: ['latin'] })
-const quicksand = Quicksand({ subsets: ['latin'] })
+import { Contact } from '../../components/contact'
 
-export default function Contact() {
-  return (
-    <main>
-      <p className={varelaRound.className}>Hello </p>
-      <p className={quicksand.className}>World</p>
-    </main>
-  )
+export default function ContactPage() {
+  return <Contact />
+}
+
+export const metadata: Metadata = {
+  title: 'Contact'
 }
