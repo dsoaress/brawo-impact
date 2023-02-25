@@ -1,3 +1,4 @@
+import { Container } from '../container'
 import { Heading } from '../heading'
 import { FifthIcon } from './assets/fifth-icon'
 import { FirstIcon } from './assets/first-icon'
@@ -45,12 +46,14 @@ const domainsData: Domain[] = [
 export function DomainsSection() {
   return (
     <div className={styles.sectionWrapper}>
-      <Heading className={styles.sectionHeading}>Domaines d&apos;expertise</Heading>
-      <div className={styles.sectionList}>
-        {domainsData.map((d, i) => (
-          <DomainCard key={i} {...d} />
-        ))}
-      </div>
+      <Container>
+        <Heading className={styles.sectionHeading}>Domaines d&apos;expertise</Heading>
+        <div className={styles.sectionList}>
+          {domainsData.map((d, i) => (
+            <DomainCard key={i} {...d} />
+          ))}
+        </div>
+      </Container>
     </div>
   )
 }

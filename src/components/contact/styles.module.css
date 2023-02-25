@@ -1,0 +1,37 @@
+.contactWrapper {
+  background-color: #50aee9;
+  padding: 64px 0;
+}
+
+.heading {
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.subheading {
+  text-align: center;
+}
+
+.form {
+  max-width: 630px;
+  margin: 32px auto 0;
+}
+
+.formName {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .formName {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+}
+
+.formFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

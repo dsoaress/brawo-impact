@@ -5,10 +5,10 @@ import styles from './styles.module.css'
 
 type TextProps = {
   as?: 'span' | 'p'
-  size?: 'xs' | 'sm' | 'md' | 'lg'
+  size?: 'xxs' | 'xs' | 'sm' | 'md' | 'lg'
   weight?: 'normal' | 'medium' | 'semibold' | 'bold'
   font?: 'raleway' | 'quicksand' | 'varelaRound'
-  color?: 'accent' | 'dark' | 'light'
+  color?: 'accent' | 'dark' | 'light' | 'critical'
 } & HTMLAttributes<HTMLSpanElement | HTMLParagraphElement>
 
 export function Text({

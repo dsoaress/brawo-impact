@@ -12,6 +12,7 @@ interface PaginationProps {
 
 export async function Pagination({ currentPage }: PaginationProps) {
   const newsData = await getNewsService({ limit: constants.NEWS_LIMIT })
+  if (newsData.totalPages <= 1) return null
   return (
     <ul className={styles.paginationWrapper}>
       {Array.from({ length: newsData.totalPages }, (_, i) => (

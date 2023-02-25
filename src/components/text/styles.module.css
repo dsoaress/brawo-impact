@@ -10,6 +10,10 @@
   font-family: var(--raleway-font);
 }
 
+.xxs {
+  font-size: 12px;
+}
+
 .xs {
   font-size: 16px;
 }
@@ -52,4 +56,8 @@
 
 .accent {
   color: #00a85b;
+}
+
+.critical {
+  color: #f00;
 }
