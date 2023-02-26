@@ -1,0 +1,35 @@
+.headerWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+}
+
+.transparent {
+  position: absolute;
+  inset: 0;
+}
+
+.solid {
+  background-color: #00a85b;
+}
+
+@media (min-width: 768px) {
+  .solid {
+    background-color: #fff;
+  }
+}
+
+.logoWrapper {
+  width: 140px;
+}
+
+.logoWrapperSolid {
+  width: 128px !important;
+}
+
+@media (min-width: 768px) {
+  .logoWrapper {
+    width: 192px;
+  }
+}

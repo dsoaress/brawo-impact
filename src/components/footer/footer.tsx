@@ -1,9 +1,9 @@
 import Link from 'next/link'
 
 import { Container } from '../container'
+import { Logo } from '../logo'
 import { Text } from '../text'
 import { LinkedinIcon } from './assets/linkedin-icon'
-import { Logo } from './assets/logo'
 import style from './styles.module.css'
 
 export function Footer() {
