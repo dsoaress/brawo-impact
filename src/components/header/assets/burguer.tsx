@@ -11,6 +11,8 @@ function BurgerBase(props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
       ref={ref}
+      aria-label="Menu"
+      style={{ cursor: 'pointer' }}
     >
       <path
         d="M32.0578 7.83793H4.02938C1.80516 7.83793 0 6.08224 0 3.91897C0 1.7557 1.80516 0 4.02938 0H32.0578C34.282 0 36.0872 1.7557 36.0872 3.91897C36.0872 6.08224 34.282 7.83793 32.0578 7.83793Z"

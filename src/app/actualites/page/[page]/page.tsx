@@ -1,12 +1,18 @@
 import type { Metadata } from 'next/types'
 
+import { Header } from '../../../../components/header'
 import { InternalNewsSection } from '../../../../components/news'
 import { constants } from '../../../../config/constants'
 import { getNewsService } from '../../../../services/get-news'
 
 export default function News({ params }: { params: { page?: string } }) {
-  // @ts-expect-error Server Component
-  return <InternalNewsSection page={params?.page ? +params.page : 1} />
+  return (
+    <>
+      <Header />
+      {/* @ts-expect-error Server Component */}
+      <InternalNewsSection page={params?.page ? +params.page : 1} />
+    </>
+  )
 }
 
 export async function generateStaticParams() {

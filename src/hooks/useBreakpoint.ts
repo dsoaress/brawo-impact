@@ -1,7 +1,10 @@
 import throttle from 'lodash.throttle'
 import { useEffect, useState } from 'react'
 
-const getDeviceConfig = (width: number) => {
+const getDeviceConfig = () => {
+  if (typeof window === 'undefined') return 'xl'
+  const width = window.innerWidth
+
   if (width < 768) {
     return 'sm'
   } else if (width >= 768 && width < 976) {
@@ -14,11 +17,11 @@ const getDeviceConfig = (width: number) => {
 }
 
 export const useBreakpoint = () => {
-  const [brkPnt, setBrkPnt] = useState(() => getDeviceConfig(window.innerWidth))
+  const [brkPnt, setBrkPnt] = useState(getDeviceConfig)
 
   useEffect(() => {
     const calcInnerWidth = throttle(() => {
-      setBrkPnt(getDeviceConfig(window.innerWidth))
+      setBrkPnt(getDeviceConfig())
     }, 200)
     window.addEventListener('resize', calcInnerWidth)
     return () => window.removeEventListener('resize', calcInnerWidth)

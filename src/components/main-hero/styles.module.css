@@ -1,0 +1,37 @@
+.mainHeroWrapper {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.container h1 {
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+.headingWrapper {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .headingWrapper {
+    width: 800px;
+  }
+}
+
+.heroImage {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -2;
+}

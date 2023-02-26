@@ -1,14 +1,16 @@
 import type { Metadata } from 'next/types'
 
+import { Header } from '../../../components/header'
 import { constants } from '../../../config/constants'
 import { getNewsService } from '../../../services/get-news'
 
 export default async function NewsItem({ params }: { params: { slug?: string } }) {
   const newsData = await getNewsService(params).then(res => res.docs[0])
   return (
-    <main>
+    <>
+      <Header />
       <h1>{newsData.title}</h1>
-    </main>
+    </>
   )
 }
 
