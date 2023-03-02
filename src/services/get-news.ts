@@ -1,5 +1,18 @@
 import qs from 'qs'
 
+interface Node {
+  type: string
+  value?: {
+    url: string
+    alt: string
+    width: number
+    height: number
+  }
+  children?: Node[]
+  url?: string
+  [key: string]: unknown
+}
+
 interface NewsResponse {
   docs: {
     id: string
@@ -14,6 +27,7 @@ interface NewsResponse {
     }
     publishedAt: string
     excerpt: string
+    content: Node[]
   }[]
   totalPages: number
   page: number

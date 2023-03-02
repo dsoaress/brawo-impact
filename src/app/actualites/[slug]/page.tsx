@@ -1,6 +1,8 @@
 import type { Metadata } from 'next/types'
 
+import { Container } from '../../../components/container'
 import { Header } from '../../../components/header'
+import { Serialize } from '../../../components/serialize'
 import { constants } from '../../../config/constants'
 import { getNewsService } from '../../../services/get-news'
 
@@ -9,7 +11,10 @@ export default async function NewsItem({ params }: { params: { slug?: string } }
   return (
     <>
       <Header />
-      <h1>{newsData.title}</h1>
+      <Container>
+        <h1>{newsData.title}</h1>
+        <Serialize content={newsData.content} />
+      </Container>
     </>
   )
 }
