@@ -1,0 +1,17 @@
+.heroWrapper {
+  position: relative;
+  height: 386px;
+  overflow: hidden;
+}
+
+.hero {
+  object-fit: cover;
+}
+
+.heading {
+  margin-bottom: 24px;
+}
+
+.date {
+  margin-bottom: 24px;
+}

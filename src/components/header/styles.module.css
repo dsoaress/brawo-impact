@@ -55,7 +55,7 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 24px;
   text-align: center;
 }
 

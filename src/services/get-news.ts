@@ -48,12 +48,12 @@ export async function getNewsService({
     {
       limit,
       page,
-      sort: 'publishedAt',
+      sort: '-publishedAt',
       where: slug ? { slug: { equals: slug } } : { published: { equals: 'true' } }
     },
     { addQueryPrefix: true }
   )
   return await fetch(`${process.env.API_URL}/news${query}`, {
-    next: { revalidate: 60 }
+    next: { revalidate: 1 }
   }).then(res => res.json())
 }

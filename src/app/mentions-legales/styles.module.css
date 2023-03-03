@@ -1,0 +1,17 @@
+.heading {
+  margin-bottom: 24px;
+}
+
+.text {
+  margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+  .heading {
+    margin-bottom: 40px;
+  }
+
+  .text {
+    margin-bottom: 24px;
+  }
+}

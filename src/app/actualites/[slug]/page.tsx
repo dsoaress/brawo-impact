@@ -1,20 +1,37 @@
+import Image from 'next/image'
 import type { Metadata } from 'next/types'
 
-import { Container } from '../../../components/container'
+import { BasePageLayout } from '../../../components/base-page-layout'
 import { Header } from '../../../components/header'
+import { Heading } from '../../../components/heading'
+import { NewsSection } from '../../../components/news'
 import { Serialize } from '../../../components/serialize'
+import { Text } from '../../../components/text'
 import { constants } from '../../../config/constants'
 import { getNewsService } from '../../../services/get-news'
+import { formatDate } from '../../../utils/format-date'
+import styles from './styles.module.css'
 
 export default async function NewsItem({ params }: { params: { slug?: string } }) {
   const newsData = await getNewsService(params).then(res => res.docs[0])
   return (
     <>
       <Header />
-      <Container>
-        <h1>{newsData.title}</h1>
+      <div className={styles.heroWrapper}>
+        <Image src={newsData.cover.url} alt={newsData.cover.alt} className={styles.hero} fill />
+      </div>
+      <BasePageLayout>
+        <Heading as="h1" className={styles.heading}>
+          {newsData.title}
+        </Heading>
+        <Text as="p" color="accent" className={styles.date} weight="bold">
+          {formatDate(newsData.publishedAt, 'short')}
+        </Text>
         <Serialize content={newsData.content} />
-      </Container>
+      </BasePageLayout>
+
+      {/* @ts-expect-error Server Component */}
+      <NewsSection title="Autres actualités d'intérêt" withBackground={false} withCta={false} />
     </>
   )
 }

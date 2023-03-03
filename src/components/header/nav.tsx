@@ -36,14 +36,14 @@ export function Nav() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/">
+                  <Link href="/manifeste">
                     <Text size="lg" color="light">
                       Manifeste
                     </Text>
                   </Link>
                 </li>
                 <li>
-                  <Link href="/">
+                  <Link href="/prendre-rendez-vous">
                     <Text size="lg" color="light">
                       Prendre rendez-vous
                     </Text>
@@ -57,7 +57,7 @@ export function Nav() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/">
+                  <Link href="/mentions-legales">
                     <Text size="lg" color="light">
                       Mentions Légales
                     </Text>

@@ -1,0 +1,24 @@
+.heroWrapper {
+  position: relative;
+  height: 386px;
+  overflow: hidden;
+}
+
+.hero {
+  object-fit: cover;
+}
+
+.content {
+  background: #fff;
+  box-shadow: 4px 4px 8px rgb(76 76 76 / 16%);
+  border-radius: 0 0 8px 8px;
+  padding: 40px 16px;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .content {
+    padding: 80px 111px;
+    margin-bottom: 80px;
+  }
+}

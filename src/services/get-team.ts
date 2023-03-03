@@ -17,7 +17,7 @@ interface TeamResponse {
 
 export async function getTeamService(): Promise<TeamResponse> {
   const query = qs.stringify({ limit: 50, sort: 'order' }, { addQueryPrefix: true })
-  return fetch(`${process.env.API_URL}/team${query}`, { next: { revalidate: 60 } }).then(res =>
+  return fetch(`${process.env.API_URL}/team${query}`, { next: { revalidate: 1 } }).then(res =>
     res.json()
   )
 }

@@ -1,4 +1,8 @@
 .sectionWrapper {
+  padding: 0 16px 72px;
+}
+
+.background {
   background: #e4f6fd;
   padding: 72px 16px;
 }
