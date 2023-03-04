@@ -1,5 +1,8 @@
+import Image from 'next/image'
+
 import { Container } from '../container'
 import { Heading } from '../heading'
+import hero from './assets/hero.png'
 import styles from './styles.module.css'
 
 export function MainHero() {
@@ -16,7 +19,19 @@ export function MainHero() {
           </Heading>
         </div>
       </Container>
-      <video autoPlay loop muted playsInline src="/hero.webm" className={styles.heroVideo} />
+      <video autoPlay loop muted playsInline className={styles.heroVideo}>
+        <source src="/hero.mp4" type="video/mp4" />
+        <source src="/hero.webm" type="video/webm" />
+      </video>
+      <Image
+        src={hero}
+        alt="hero"
+        placeholder="blur"
+        fill
+        className={styles.heroImage}
+        quality={100}
+        priority
+      />
     </div>
   )
 }
