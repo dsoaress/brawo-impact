@@ -34,7 +34,7 @@ export function Form() {
 
   const onSubmit: SubmitHandler<FormData> = async data => {
     try {
-      await fetch('/api/contact', {
+      await fetch('/contact/api', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)

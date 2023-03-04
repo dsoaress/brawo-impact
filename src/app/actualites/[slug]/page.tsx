@@ -5,6 +5,8 @@ import { BasePageLayout } from '../../../components/base-page-layout'
 import { Header } from '../../../components/header'
 import { Heading } from '../../../components/heading'
 import { NewsSection } from '../../../components/news'
+import { Breadcrumb } from '../../../components/news/breadcrumb'
+import { Share } from '../../../components/news/share'
 import { Serialize } from '../../../components/serialize'
 import { Text } from '../../../components/text'
 import { constants } from '../../../config/constants'
@@ -14,6 +16,7 @@ import styles from './styles.module.css'
 
 export default async function NewsItem({ params }: { params: { slug?: string } }) {
   const newsData = await getNewsService(params).then(res => res.docs[0])
+  const url = `${constants.SITE_URL}/actualites/${newsData.slug}`
   return (
     <>
       <Header />
@@ -21,6 +24,7 @@ export default async function NewsItem({ params }: { params: { slug?: string } }
         <Image src={newsData.cover.url} alt={newsData.cover.alt} className={styles.hero} fill />
       </div>
       <BasePageLayout>
+        <Breadcrumb />
         <Heading as="h1" className={styles.heading}>
           {newsData.title}
         </Heading>
@@ -28,6 +32,7 @@ export default async function NewsItem({ params }: { params: { slug?: string } }
           {formatDate(newsData.publishedAt, 'short')}
         </Text>
         <Serialize content={newsData.content} />
+        <Share url={url} />
       </BasePageLayout>
 
       {/* @ts-expect-error Server Component */}

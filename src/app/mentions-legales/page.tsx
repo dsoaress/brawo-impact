@@ -13,7 +13,7 @@ export default function MentionsLegales() {
       <Header />
       <BasePageLayout hero={hero}>
         <Heading color="accent" className={styles.heading}>
-          Notre manifeste
+          Mentions Légales
         </Heading>
         <Text as="p" className={styles.text}>
           Parce que la transition durable nous oblige à repenser les métiers et les compétences,

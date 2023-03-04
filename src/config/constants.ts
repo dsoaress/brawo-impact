@@ -4,6 +4,6 @@ export const constants = {
   // TODO: Replace description with a real one
   SITE_DESCRIPTION: 'Lorem ipsum',
   NEWS_LIMIT: 5,
-  CONTACT_FORM_EMAIL_TO: 'kaelig.sadaune@brawo.fr',
+  CONTACT_FORM_EMAIL_TO: 'daniel.soares@me.com',
   CONTACT_FORM_EMAIL_FROM: 'kaelig.sadaune@brawo.fr'
 }

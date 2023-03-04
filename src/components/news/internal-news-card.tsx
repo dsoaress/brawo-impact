@@ -39,7 +39,7 @@ export function InternalNewsCard({ cover, excerpt, publishedAt, slug, title }: N
           <Text color="accent" weight="bold">
             {formatDate(publishedAt, 'short')}
           </Text>
-          <Text>{excerpt}</Text>
+          <Text className={styles.internalCardExcerpt}>{excerpt}</Text>
           <div>
             <Button>En savoir plus</Button>
           </div>
