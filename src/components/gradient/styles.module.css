@@ -1,0 +1,8 @@
+.gradient {
+  position: absolute;
+  background: linear-gradient(90deg, #00a85b 0%, #50aee9 100%);
+  mix-blend-mode: multiply;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  inset: 0;
+  z-index: -1;
+}

@@ -125,12 +125,6 @@
   border-radius: 4px;
 }
 
-@media (max-width: 768px) {
-  .internalCardCover {
-    height: 336px;
-  }
-}
-
 .internalCardContent {
   display: flex;
   flex-direction: column;

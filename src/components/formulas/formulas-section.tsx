@@ -1,7 +1,11 @@
 import { Container } from '../container'
+import { Gradient } from '../gradient'
+import { Heading } from '../heading'
 import { FormulaCard } from './formula-card'
+import styles from './styles.module.css'
 
 export interface Formula {
+  theme: 'light' | 'dark'
   title: string
   description: string
   button: {
@@ -12,6 +16,7 @@ export interface Formula {
 
 const formulasData: Formula[] = [
   {
+    theme: 'dark',
     title: 'Essential',
     description:
       'Simplicité, rapidité, efficacité, la formule pensée pour les entreprises qui recrutent un ouvrier, un technicien ou un profil support.',
@@ -21,6 +26,7 @@ const formulasData: Formula[] = [
     }
   },
   {
+    theme: 'light',
     title: 'Search',
     description:
       'Expertise, rigueur et méthode, la formule pensée pour les entreprises qui recrutent un cadre, un expert ou un middle manager.',
@@ -33,12 +39,17 @@ const formulasData: Formula[] = [
 
 export function FormulasSection() {
   return (
-    <div>
+    <div className={styles.formulaSectionWrapper}>
+      <Gradient />
       <Container>
-        <h2>2 formules qui s&apos;adaptent à votre besoin</h2>
-        {formulasData.map((f, i) => (
-          <FormulaCard key={i} {...f} />
-        ))}
+        <Heading color="light" className={styles.formulaSectionHeading}>
+          2 formules qui s&apos;adaptent à votre besoin
+        </Heading>
+        <div className={styles.formulaSectionContent}>
+          {formulasData.map((f, i) => (
+            <FormulaCard key={i} {...f} />
+          ))}
+        </div>
       </Container>
     </div>
   )

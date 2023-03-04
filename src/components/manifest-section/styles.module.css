@@ -1,0 +1,53 @@
+.manifestWrapper {
+  position: relative;
+  background: #fff;
+  padding: 56px 0;
+}
+
+.manifestContent {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.text {
+  line-height: 1.5;
+  font-size: 18px !important;
+}
+
+.manifestImage {
+  position: absolute;
+  margin: 0 auto;
+  inset: 0;
+  text-align: center;
+}
+
+.manifestImage img {
+  width: 360px;
+  height: 360px;
+}
+
+@media (min-width: 768px) {
+  .manifestWrapper {
+    padding: 80px 0;
+  }
+
+  .manifestContent {
+    max-width: 768px;
+  }
+
+  .text {
+    font-size: 24px !important;
+  }
+
+  .manifestImage {
+    inset: unset;
+    right: 98px;
+    top: 38px;
+  }
+
+  .manifestImage img {
+    width: 398px;
+    height: 398px;
+  }
+}

@@ -1,0 +1,67 @@
+.formulaSectionWrapper {
+  position: relative;
+  padding: 40px 0;
+}
+
+.formulaSectionHeading {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.formulaSectionContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1154px;
+  margin: 0 auto;
+  gap: 24px;
+}
+
+.formulaCardWrapper {
+  padding: 50px 32px;
+  border-radius: 8px;
+  box-shadow: 0 9px 30px rgb(0 0 0 / 20%);
+  border: 1px solid #fff;
+}
+
+.formulaCardWrapperDark {
+  background: rgb(56 56 56 / 15%);
+}
+
+.formulaCardWrapperLight {
+  background: #fff;
+}
+
+.formulaCardWrapperHeading {
+  text-transform: uppercase;
+}
+
+.formulaCardWrapperHr {
+  margin: 24px 0;
+  border: 0;
+  border-top: 1px solid #e8e8e8;
+}
+
+.formulaCardWrapperText {
+  font-size: 20px !important;
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .formulaSectionWrapper {
+    padding: 120px 0;
+  }
+
+  .formulaSectionHeading {
+    margin-bottom: 40px;
+  }
+
+  .formulaSectionContent {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .formulaCardWrapper {
+    padding: 72px 40px;
+  }
+}
