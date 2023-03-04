@@ -1,5 +1,6 @@
 import type { Metadata } from 'next/types'
 
+import { AppointmentSection } from '../../components/appointment-section'
 import { BasePageLayout } from '../../components/base-page-layout'
 import { Header } from '../../components/header'
 import { Heading } from '../../components/heading'
@@ -35,6 +36,7 @@ export default function Manifeste() {
           integer nisi sem purus.
         </Text>
       </BasePageLayout>
+      <AppointmentSection />
     </>
   )
 }
