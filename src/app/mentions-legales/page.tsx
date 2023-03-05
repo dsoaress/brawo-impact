@@ -17,23 +17,23 @@ export default function MentionsLegales() {
           Mentions Légales
         </Heading>
         <Text as="p" className={styles.text}>
-          Parce que la transition durable nous oblige à repenser les métiers et les compétences,
-          Brawo Impact s’engage aux côtés des entreprises pour les aider à recruter les talents
-          d&apos;aujourd&apos;hui et de demain.
+          La Société BRAWO, SAS, au capital 12 990 euros, dont le siège social est situé Hélioparc
+          Technopôle – 2 Avenue Pierre Angot – CS 8011 – 64053 PAU CEDEX 9, immatriculée au RCS de
+          PAU sous le n°904 623 337
         </Text>
 
         <Text as="p" className={styles.text}>
-          Lorem ipsum dolor sit amet consectetur. Semper euismod sapien libero vitae consequat eget
-          in rhoncus. Mi commodo ultricies etiam duis nec a. Ut mauris egestas iaculis viverra dolor
-          ornare proin lacinia feugiat. Massa orci velit mi volutpat velit eget est at a. Pretium
-          rhoncus congue mattis eleifend vel nisl est dolor a.
+          Directeur de la Publication: Kaelig SADAUNE, Président Directeur Général
         </Text>
 
         <Text as="p" className={styles.text}>
-          Nisi in vulputate luctus sapien volutpat quisque non. Volutpat nec mi sed volutpat neque
-          risus posuere consectetur. Sapien rhoncus egestas maecenas in imperdiet mattis morbi
-          viverra. Libero fermentum congue purus mauris risus tellus auctor neque amet. Pharetra
-          integer nisi sem purus.
+          <strong>Hébergement:</strong>
+          <br />
+          OVH <br />
+          RCS Lille Métropole 424 761 419 00045 <br />
+          Code APE 2620Z <br />
+          N° TVA : FR 22 424 761 419 <br />
+          Siège social : 2 rue Kellermann – 59100 Roubaix – France
         </Text>
       </BasePageLayout>
       <AppointmentSection />

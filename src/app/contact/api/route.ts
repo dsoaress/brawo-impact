@@ -3,7 +3,7 @@ import sgMail from '@sendgrid/mail'
 import { constants } from '../../../config/constants'
 
 export async function POST(req: Request) {
-  const { firstName, lastName, email, phone, subject, message } = await req.json()
+  const { firstName, lastName, email, phone, message } = await req.json()
   const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY
   const { CONTACT_FORM_EMAIL_TO, CONTACT_FORM_EMAIL_FROM } = constants
 
@@ -18,13 +18,12 @@ export async function POST(req: Request) {
       to: CONTACT_FORM_EMAIL_TO,
       from: `Contact Brawo Impact <${CONTACT_FORM_EMAIL_FROM}>`,
       replyTo: `${firstName} ${lastName} <${email}>`,
-      subject,
+      subject: `Nouveau message de ${firstName} ${lastName}`,
       text: message,
       html: `
             <p><strong>Prénom:</strong> ${firstName}</p>
             <p><strong>Nom:</strong> ${lastName}</p>
             <p><strong>Email:</strong> ${email}</p>
-            <p><strong>Sujet:</strong> ${subject}</p>
             <p><strong>Téléphone:</strong> ${phone}</p>
             <p><strong>Message:</strong> ${message}</p>
           `

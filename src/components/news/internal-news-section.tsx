@@ -12,9 +12,9 @@ export async function InternalNewsSection({ page = 1 }: { page: number }) {
     <Container>
       <div className={styles.internalSectionWrapper}>
         <Heading className={styles.internalSectionHeading}>Actualités</Heading>
-        <Heading className={styles.internalSectionSubHeading} as="h2">
+        {/* <Heading className={styles.internalSectionSubHeading} as="h2">
           Lorem ipsum dolor sit amet consectetur.
-        </Heading>
+        </Heading> */}
         <div className={styles.internalSectionList}>
           {newsData.docs.map((n, i) => (
             <InternalNewsCard key={i} {...n} />

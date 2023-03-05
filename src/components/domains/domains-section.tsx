@@ -18,28 +18,29 @@ const domainsData: Domain[] = [
   {
     icon: <FirstIcon />,
     title: 'Energies Renouvelables',
-    description: 'Photovoltaïque Eolien Hydraulique Hydrogène Biomasse'
+    description: 'Photovoltaïque<br />Eolien<br />Hydraulique<br />Hydrogène<br />Biomasse'
   },
   {
     icon: <SecondIcon />,
     title: 'Economie Circulaire',
     description:
-      'Recyclage Achat durable Eco Conception Ecologie industrielle Réparation & Réemploi'
+      'Recyclage<br />Achat durable<br />Eco Conception<br />Ecologie industrielle<br />Réparation & Réemploi'
   },
   {
     icon: <ThirdIcon />,
     title: 'Bâtiments durables',
-    description: 'Isolation Bureaux études Construction Géothermie'
+    description: 'Isolation<br />Bureaux études<br />Construction<br />Géothermie'
   },
   {
     icon: <FourthIcon />,
     title: 'Business Impact',
-    description: 'Project Management Analyse & Finance Sales, Digital Impact Marketing'
+    description:
+      'Project Management<br />Analyse & Finance<br />Sales, Digital<br />Impact Marketing'
   },
   {
     icon: <FifthIcon />,
     title: 'Economie Sociale & Solidaire',
-    description: "Association Fondation Coopérative Société d'utilité sociale"
+    description: "Association<br />Fondation<br />Coopérative<br />Société d'utilité sociale"
   }
 ]
 

@@ -8,7 +8,7 @@ export function TransparentHeader() {
       <div className={styles.logoWrapper}>
         <Logo style="light" />
       </div>
-      <Nav />
+      <Nav style="light" />
     </>
   )
 }

@@ -12,9 +12,12 @@ export function DomainCard({ description, icon, title }: Domain) {
           {title}
         </Heading>
       </div>
-      <Text font="quicksand" weight="medium" size="xs">
-        {description}
-      </Text>
+      <Text
+        font="quicksand"
+        weight="medium"
+        size="xs"
+        dangerouslySetInnerHTML={{ __html: description }}
+      />
     </div>
   )
 }

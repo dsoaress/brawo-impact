@@ -4,7 +4,7 @@ import type { HTMLAttributes } from 'react'
 import styles from './styles.module.css'
 
 type ButtonProps = {
-  style?: 'solid' | 'outline' | 'secondary'
+  style?: 'solid' | 'outline' | 'secondary' | 'tertiary'
 } & HTMLAttributes<HTMLButtonElement>
 
 export function Button({ style = 'solid', className, ...props }: ButtonProps) {
@@ -15,7 +15,8 @@ export function Button({ style = 'solid', className, ...props }: ButtonProps) {
         {
           [styles.solid]: style === 'solid',
           [styles.outline]: style === 'outline',
-          [styles.secondary]: style === 'secondary'
+          [styles.secondary]: style === 'secondary',
+          [styles.tertiary]: style === 'tertiary'
         },
         className
       )}

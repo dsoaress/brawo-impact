@@ -24,7 +24,7 @@ export function Footer() {
               className={style.footerLink}
               // eslint-disable-next-line @typescript-eslint/ban-ts-comment
               // @ts-expect-error
-              href="https://fr.linkedin.com/company/brawo-talent"
+              href="https://www.linkedin.com/showcase/brawo-impact"
               aria-label="Linkedin"
               target="_blank"
               rel="noreferrer noopener"

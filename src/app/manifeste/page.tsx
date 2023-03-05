@@ -4,6 +4,7 @@ import { AppointmentSection } from '../../components/appointment-section'
 import { BasePageLayout } from '../../components/base-page-layout'
 import { Header } from '../../components/header'
 import { Heading } from '../../components/heading'
+import { ManifestVideo } from '../../components/manifest-section'
 import { Text } from '../../components/text'
 import hero from './assets/hero.png'
 import styles from './styles.module.css'
@@ -16,24 +17,27 @@ export default function Manifeste() {
         <Heading color="accent" className={styles.heading}>
           Notre manifeste
         </Heading>
+
+        <ManifestVideo />
+
         <Text as="p" className={styles.text}>
-          Parce que la transition durable nous oblige à repenser les métiers et les compétences,
-          Brawo Impact s’engage aux côtés des entreprises pour les aider à recruter les talents
-          d&apos;aujourd&apos;hui et de demain.
+          Pour s&apos;occuper sérieusement de notre planète, il faut certes fixer des objectifs,
+          mais il faut aussi des gens pour innover, pour construire et pour les atteindre.
         </Text>
 
         <Text as="p" className={styles.text}>
-          Lorem ipsum dolor sit amet consectetur. Semper euismod sapien libero vitae consequat eget
-          in rhoncus. Mi commodo ultricies etiam duis nec a. Ut mauris egestas iaculis viverra dolor
-          ornare proin lacinia feugiat. Massa orci velit mi volutpat velit eget est at a. Pretium
-          rhoncus congue mattis eleifend vel nisl est dolor a.
+          Nous devons rapidement produire autrement, et nous avons pour cela besoin de développer
+          des nouveaux savoir-faire et des nouveaux des savoir-être.
         </Text>
 
         <Text as="p" className={styles.text}>
-          Nisi in vulputate luctus sapien volutpat quisque non. Volutpat nec mi sed volutpat neque
-          risus posuere consectetur. Sapien rhoncus egestas maecenas in imperdiet mattis morbi
-          viverra. Libero fermentum congue purus mauris risus tellus auctor neque amet. Pharetra
-          integer nisi sem purus.
+          Pour relever ce défi, il faut anticiper les besoins, imaginer les métiers de demain,
+          identifier, former et recruter.
+        </Text>
+        <Text as="p" className={styles.text}>
+          Parce que la transition environnementale nous oblige à repenser les métiers et les
+          compétences, Brawo a créé, Brawo Impact, le service de recrutement 100% spécialisé dans
+          les métiers de la transformation durable.
         </Text>
       </BasePageLayout>
       <AppointmentSection />

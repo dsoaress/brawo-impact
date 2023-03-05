@@ -9,7 +9,7 @@ import { Text } from '../text'
 import { Burger } from './assets/burguer'
 import styles from './styles.module.css'
 
-export function Nav() {
+export function Nav({ style }: { style?: 'color' | 'light' }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const breakpoint = useBreakpoint()
 
@@ -71,9 +71,18 @@ export function Nav() {
           ) : null}
         </>
       ) : (
-        <Link href="/contact">
-          <Button style="secondary">Contact</Button>
-        </Link>
+        <div className={styles.buttonWrapper}>
+          {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+          {/* @ts-ignore */}
+          <Link href="https://www.brawo.fr/candidat" target="_blank" rel="noreferrer noopener">
+            <Button style={style === 'light' ? 'tertiary' : 'secondary'}>Espace Candidat</Button>
+          </Link>
+          {style === 'light' ? (
+            <Link href="/contact">
+              <Button style="secondary">Contact</Button>
+            </Link>
+          ) : null}
+        </div>
       )}
     </nav>
   )

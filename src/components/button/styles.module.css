@@ -27,3 +27,9 @@
   background: #00a85b;
   border: 2px solid #00a85b;
 }
+
+.tertiary {
+  background: #fff;
+  border: 2px solid #fff;
+  color: #00a85b;
+}

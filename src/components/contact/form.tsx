@@ -16,7 +16,7 @@ const schema = yup.object().shape({
   lastName: yup.string().required('Nom requis'),
   email: yup.string().email('Email invalide').required('Email requis'),
   phone: yup.string().required('Téléphone requis'),
-  subject: yup.string().required('Sujet requis'),
+  // subject: yup.string().required('Sujet requis'),
   message: yup.string().required('Message requis')
 })
 
@@ -59,7 +59,7 @@ export function Form() {
       </div>
       <Input label="Email" {...register('email')} error={errors.email?.message} required />
       <Input label="Téléphone" {...register('phone')} error={errors.phone?.message} required />
-      <Input label="Sujet" {...register('subject')} error={errors.subject?.message} required />
+      {/* <Input label="Sujet" {...register('subject')} error={errors.subject?.message} required /> */}
       <Textarea label="Message" {...register('message')} error={errors.message?.message} required />
       <div className={styles.formFooter}>
         <Text color="light">
