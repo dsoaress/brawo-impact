@@ -95,7 +95,7 @@ export const Serialize: SerializeFunction = ({ content }) => {
                 alt={node.value.alt}
                 width={node.value.width}
                 height={node.value.height}
-                style={{ maxWidth: '100%', maxHeight: '600px', objectFit: 'cover' }}
+                style={{ maxWidth: '100%', maxHeight: '600px', objectFit: 'contain' }}
               />
             ) : null
           case 'indent':

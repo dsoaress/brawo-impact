@@ -22,7 +22,7 @@ export function ManifestSection() {
             Brawo Impact s’engage aux côtés des entreprises pour les aider à recruter les talents
             d&apos;aujourd&apos;hui et de demain.
           </Text>
-          <Link href="/manifeste">
+          <Link href="/manifeste" style={{ zIndex: 10 }}>
             <Button>Lire notre manifeste</Button>
           </Link>
         </div>
