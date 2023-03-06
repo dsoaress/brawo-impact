@@ -15,7 +15,7 @@ export function AppointmentSection() {
           <Heading color="light" as="h1" className={styles.heading}>
             Recrutez dès aujourd&apos;hui vos futurs talents
           </Heading>
-          <Link href="/prendre-rendez-vous">
+          <Link href="/contact">
             <Button>Prendre rendez-vous</Button>
           </Link>
         </div>

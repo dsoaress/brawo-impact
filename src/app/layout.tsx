@@ -37,5 +37,6 @@ export const metadata: Metadata = {
   icons: {
     // TODO: Add more icons
     icon: '/favicon.ico'
-  }
+  },
+  keywords: constants.SITE_KEYWORDS
 }

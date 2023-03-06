@@ -29,7 +29,13 @@ export function Nav({ style }: { style?: 'color' | 'light' }) {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/">
+                  <Link
+                    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                    // @ts-ignore
+                    href="https://www.brawo.fr/candidat"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
                     <Text size="lg" color="light">
                       Espace Candidat
                     </Text>
@@ -43,7 +49,7 @@ export function Nav({ style }: { style?: 'color' | 'light' }) {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/prendre-rendez-vous">
+                  <Link href="/contact">
                     <Text size="lg" color="light">
                       Prendre rendez-vous
                     </Text>

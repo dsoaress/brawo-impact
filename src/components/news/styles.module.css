@@ -78,6 +78,7 @@
 .internalSectionHeading {
   text-align: center;
   text-transform: uppercase;
+  margin-bottom: 64px;
 }
 
 .internalSectionSubHeading {
