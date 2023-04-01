@@ -78,7 +78,7 @@
 }
 
 .formulasDescriptionCardsContainer {
-  padding: 40px 16px;
+  padding: 40px 16px !important;
 }
 
 .formulasDescriptionCardsWrapper {
@@ -141,7 +141,7 @@
   }
 
   .formulasDescriptionCardsContainer {
-    padding: 64px 16px;
+    padding: 64px 16px !important;
   }
 
   .formulasDescriptionCardsWrapper {
