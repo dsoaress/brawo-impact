@@ -1,9 +1,17 @@
-.mainHeroWrapper {
+.heroWrapper {
   position: relative;
   width: 100%;
   height: 80vh;
   overflow: hidden;
   z-index: -1;
+}
+
+.normalHeroWrapper {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(90deg, #00A85B 0%, #50AEE9 100%);
+mix-blend-mode: normal;
+padding: 40px 0;
 }
 
 .container {
@@ -26,6 +34,11 @@
   .headingWrapper {
     width: 800px;
   }
+
+  .normalHeroWrapper {
+padding: 120px 0;
+text-align: center;
+}
 }
 
 .heroImage {

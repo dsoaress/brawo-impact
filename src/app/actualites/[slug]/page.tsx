@@ -25,10 +25,10 @@ export default async function NewsItem({ params }: { params: { slug?: string } }
       </div>
       <BasePageLayout>
         <Breadcrumb />
-        <Heading as="h1" className={styles.heading}>
+        <Heading as="h1" color="accent" className={styles.heading}>
           {newsData.title}
         </Heading>
-        <Text as="p" color="accent" className={styles.date} weight="bold">
+        <Text as="p" className={styles.date} weight="bold">
           {formatDate(newsData.publishedAt, 'short')}
         </Text>
         <Serialize content={newsData.content} />

@@ -47,6 +47,36 @@
   line-height: 1.6;
 }
 
+.formulaCardButtonWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 72px;
+}
+
+.formulasSupplementWrapper {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.formulasSupplementFirstBox {
+  padding: 40px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.formulasSupplementSecondBox {
+  display: flex;
+  align-items: center;
+  background: #00A85B;
+  padding: 40px 16px;
+}
+
+.formulasSupplementSpan {
+  color: #00A85B;
+}
+
 @media (min-width: 768px) {
   .formulaSectionWrapper {
     padding: 120px 0;
@@ -64,4 +94,21 @@
   .formulaCardWrapper {
     padding: 72px 40px;
   }
+
+  .formulasSupplementWrapper {
+    flex-direction: row;
+  }
+  
+  .formulasSupplementFirstBox {
+    padding: 80px 64px;
+  gap: 40px;
+  width: 55%;
 }
+
+.formulasSupplementSecondBox {
+  padding: 0 64px;
+  text-align: right;
+  width: 45%;
+}
+}
+

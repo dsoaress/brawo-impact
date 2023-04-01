@@ -9,9 +9,11 @@
 }
 
 .heading {
+  font-size: 48px !important;
   margin-bottom: 24px;
 }
 
 .date {
+  color:rgb(80, 174, 233) !important;
   margin-bottom: 24px;
 }

@@ -7,7 +7,7 @@ import styles from './styles.module.css'
 
 export function MainHero() {
   return (
-    <div className={styles.mainHeroWrapper}>
+    <div className={styles.heroWrapper}>
       <Container className={styles.container}>
         <div className={styles.headingWrapper}>
           <Heading color="light" as="h1">

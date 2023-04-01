@@ -22,7 +22,7 @@ const formulasData: Formula[] = [
       'Simplicité, rapidité, efficacité, la formule pensée pour les entreprises qui recrutent un ouvrier, un technicien ou un profil support.',
     button: {
       label: 'En savoir plus',
-      link: 'https://www.google.com'
+      link: '/formules'
     }
   },
   {
@@ -32,7 +32,7 @@ const formulasData: Formula[] = [
       'Expertise, rigueur et méthode, la formule pensée pour les entreprises qui recrutent un cadre, un expert ou un middle manager.',
     button: {
       label: 'En savoir plus',
-      link: 'https://www.google.com'
+      link: '/formules'
     }
   }
 ]
