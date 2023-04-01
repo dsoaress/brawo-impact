@@ -6,34 +6,37 @@ export function FormulasSupplement() {
   return (
     <div className={styles.formulasSupplementWrapper}>
       <div className={styles.formulasSupplementFirstBox}>
-        <Text as="p" size="md" weight="bold">
-          Expertise Nous avons développé une expertise forte dansl’identification et le{' '}
-          <span className={styles.formulasSupplementSpan}>
-            recrutement des métiers de la transformation durable.
-          </span>
-        </Text>
+        <div>
+          <Heading as="h3">Expertise et spécialisation sur les métiers à impact</Heading>
+          <Text as="p">
+            Nous avons développé une forte expertise dans l&apos;identification des compétences
+            vertes nécessaires pour réussir la transformation durable
+          </Text>
+        </div>
 
-        <Text as="p" size="md" weight="bold">
-          L’approche directe dans notre ADN Nous ciblons les meilleurs profils et les évaluons avec
-          nos{' '}
-          <span className={styles.formulasSupplementSpan}>
-            tests comportementaux de dernière génération.
-          </span>
-        </Text>
+        <div>
+          <Heading as="h3">L&apos;approche directe dans notre ADN</Heading>
+          <Text as="p">
+            Nous ciblons, attirons et engageons les meilleurs profils en appui sur une méthode
+            d&apos;acquisition innovante
+          </Text>
+        </div>
 
-        <Text as="p" size="md" weight="bold">
-          Fonctionnement au succès Notre facturation se fait au succès,{' '}
-          <span className={styles.formulasSupplementSpan}>
-            c’est-à-dire lors de l’entrée en poste du candidat.
-          </span>
-        </Text>
+        <div>
+          <Heading as="h3">Evaluation des valeurs environnementales et sociétales</Heading>
+          <Text as="p">
+            Nous avons développé des tests pour évaluer l&apos;engagement et l&apos;adéquation des
+            candidats avec les valeurs durables.
+          </Text>
+        </div>
 
-        <Text as="p" size="md" weight="bold">
-          Recrutement partout en France Notre agence est digitale et{' '}
-          <span className={styles.formulasSupplementSpan}>
-            notre fonctionnement est dématérialisé.
-          </span>
-        </Text>
+        <div>
+          <Heading as="h3">Recrutement au succès partout en France</Heading>
+          <Text as="p">
+            Nous avons développé des tests pour évaluer l&apos;engagement et l&apos;adéquation des
+            candidats avec les valeurs durables.
+          </Text>
+        </div>
       </div>
       <div className={styles.formulasSupplementSecondBox}>
         <Heading color="light">

@@ -25,12 +25,13 @@ const formulasDescriptionData: FormulasDescription[] = [
       { title: 'Sourcing', checked: true },
       { title: 'Engagement & Qualification', checked: true },
       { title: 'Entretien', checked: true },
-      { title: 'Contrôle de réferences', checked: false },
-      { title: 'Tests de compéténces', checked: false },
+      { title: 'Test Green Skills', checked: true },
+      { title: 'Test Soft Skills', checked: false },
       { title: 'Shortlist', checked: true },
+      { title: 'Contrôle de références', checked: false },
       { title: 'Aide à la décision', checked: true },
-      { title: 'Onboarding & Suivi', checked: true },
-      { title: 'Progresst report', checked: false }
+      { title: 'Onboarding & suivi', checked: true },
+      { title: 'Progress report', checked: false }
     ],
     footer: '15% de la rémuneration annuelle brute'
   },
@@ -44,12 +45,13 @@ const formulasDescriptionData: FormulasDescription[] = [
       { title: 'Sourcing', checked: true },
       { title: 'Engagement & Qualification', checked: true },
       { title: 'Entretien', checked: true },
-      { title: 'Contrôle de réferences', checked: true },
-      { title: 'Tests de compéténces', checked: true },
+      { title: 'Test Green Skills', checked: true },
+      { title: 'Test Soft Skills', checked: true },
       { title: 'Shortlist', checked: true },
+      { title: 'Contrôle de références', checked: true },
       { title: 'Aide à la décision', checked: true },
-      { title: 'Onboarding & Suivi', checked: true },
-      { title: 'Progresst report', checked: true }
+      { title: 'Onboarding & suivi', checked: true },
+      { title: 'Progress report', checked: true }
     ],
     footer: '18% de la rémuneration annuelle brute'
   }
