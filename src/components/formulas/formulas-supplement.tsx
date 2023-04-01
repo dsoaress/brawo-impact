@@ -26,7 +26,7 @@ export function FormulasSupplement() {
           <Heading as="h3">Evaluation des valeurs environnementales et sociétales</Heading>
           <Text as="p">
             Nous avons développé des tests pour évaluer l&apos;engagement et l&apos;adéquation des
-            candidats avec les valeurs durables.
+            candidats avec les valeurs durables
           </Text>
         </div>
 
@@ -34,7 +34,7 @@ export function FormulasSupplement() {
           <Heading as="h3">Recrutement au succès partout en France</Heading>
           <Text as="p">
             Nous avons développé des tests pour évaluer l&apos;engagement et l&apos;adéquation des
-            candidats avec les valeurs durables.
+            candidats avec les valeurs durables
           </Text>
         </div>
       </div>
