@@ -30,11 +30,12 @@ export function FormulaCard({ title, description, theme, button }: Formula) {
       >
         {description}
       </Text>
-      {/* <div className={styles.formulaCardButtonWrapper}>
+      <div className={styles.formulaCardButtonWrapper}>
+        {/*@ts-expect-error type error on Link component */}
         <Link href={button.link}>
           <Button style={theme === 'light' ? 'secondary' : 'solid'}>{button.label}</Button>
         </Link>
-      </div> */}
+      </div>
     </div>
   )
 }

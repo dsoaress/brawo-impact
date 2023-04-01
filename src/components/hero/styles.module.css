@@ -9,9 +9,9 @@
 .normalHeroWrapper {
   position: relative;
   width: 100%;
-  background: linear-gradient(90deg, #00A85B 0%, #50AEE9 100%);
-mix-blend-mode: normal;
-padding: 40px 0;
+  background: linear-gradient(90deg, #00a85b 0%, #50aee9 100%);
+  mix-blend-mode: normal;
+  padding: 40px 0;
 }
 
 .container {
@@ -36,9 +36,9 @@ padding: 40px 0;
   }
 
   .normalHeroWrapper {
-padding: 120px 0;
-text-align: center;
-}
+    padding: 120px 0;
+    text-align: center;
+  }
 }
 
 .heroImage {

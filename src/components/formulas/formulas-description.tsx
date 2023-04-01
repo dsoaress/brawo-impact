@@ -1,6 +1,7 @@
 import { Container } from '../container'
 import { Heading } from '../heading'
 import { FormulasDescriptionCard } from './formulas-description-card'
+import styles from './styles.module.css'
 
 export interface FormulasDescription {
   theme: 'accent' | 'dark'
@@ -10,6 +11,7 @@ export interface FormulasDescription {
     title: string
     checked: boolean
   }[]
+  footer: string
 }
 
 const formulasDescriptionData: FormulasDescription[] = [
@@ -29,10 +31,11 @@ const formulasDescriptionData: FormulasDescription[] = [
       { title: 'Aide à la décision', checked: true },
       { title: 'Onboarding & Suivi', checked: true },
       { title: 'Progresst report', checked: false }
-    ]
+    ],
+    footer: '15% de la rémuneration annuelle brute'
   },
   {
-    theme: 'accent',
+    theme: 'dark',
     title: 'Search',
     description:
       'Expertise, rigueur et méthode, la formule pensée pour les entreprises qui recrutent un cadre, un expert ou un middle manager.',
@@ -47,17 +50,22 @@ const formulasDescriptionData: FormulasDescription[] = [
       { title: 'Aide à la décision', checked: true },
       { title: 'Onboarding & Suivi', checked: true },
       { title: 'Progresst report', checked: true }
-    ]
+    ],
+    footer: '18% de la rémuneration annuelle brute'
   }
 ]
 
 export function FormulasDescription() {
   return (
-    <Container>
-      <Heading color="accent">2 formules qui s&apos;adaptent à votre besoin</Heading>
-      {formulasDescriptionData.map((f, i) => (
-        <FormulasDescriptionCard key={i} {...f} />
-      ))}
+    <Container className={styles.formulasDescriptionCardsContainer}>
+      <Heading style={{ textAlign: 'center', marginBottom: 32 }} color="accent">
+        2 formules qui s&apos;adaptent à votre besoin
+      </Heading>
+      <div className={styles.formulasDescriptionCardsWrapper}>
+        {formulasDescriptionData.map((f, i) => (
+          <FormulasDescriptionCard key={i} {...f} />
+        ))}
+      </div>
     </Container>
   )
 }

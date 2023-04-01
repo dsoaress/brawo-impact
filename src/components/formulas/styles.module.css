@@ -69,12 +69,41 @@
 .formulasSupplementSecondBox {
   display: flex;
   align-items: center;
-  background: #00A85B;
+  background: #00a85b;
   padding: 40px 16px;
 }
 
 .formulasSupplementSpan {
-  color: #00A85B;
+  color: #00a85b;
+}
+
+.formulasDescriptionCardsContainer {
+  padding: 40px 16px;
+}
+
+.formulasDescriptionCardsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formulasDescriptionCardWrapper {
+  background: #fff;
+  box-shadow: 0 1px 24px rgb(56 56 56 / 16%);
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.formulasDescriptionCardList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formulasDescriptionCardListItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 @media (min-width: 768px) {
@@ -98,17 +127,29 @@
   .formulasSupplementWrapper {
     flex-direction: row;
   }
-  
+
   .formulasSupplementFirstBox {
     padding: 80px 64px;
-  gap: 40px;
-  width: 55%;
-}
+    gap: 40px;
+    width: 55%;
+  }
 
-.formulasSupplementSecondBox {
-  padding: 0 64px;
-  text-align: right;
-  width: 45%;
-}
-}
+  .formulasSupplementSecondBox {
+    padding: 0 64px;
+    text-align: right;
+    width: 45%;
+  }
 
+  .formulasDescriptionCardsContainer {
+    padding: 64px 16px;
+  }
+
+  .formulasDescriptionCardsWrapper {
+    flex-direction: row;
+    gap: 34px;
+  }
+
+  .formulasDescriptionCardWrapper {
+    padding: 64px 40px;
+  }
+}
